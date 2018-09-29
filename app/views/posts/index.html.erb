@@ -1,8 +1,8 @@
 <h1>The Gram</h1>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path %><br>
 
 <% @posts.each do |post|%>
-  <%= image_tag post.image.url(:medium) %>
-  <%= post.caption %>
+  <%= link_to (image_tag post.image.url(:medium)), post%><br>
+  <%= post.caption %><br>
 <% end %>
