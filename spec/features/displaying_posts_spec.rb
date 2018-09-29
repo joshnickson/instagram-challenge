@@ -8,7 +8,6 @@ RSpec.feature "Diplaying posts", type: :feature do
     visit '/'
     expect(page).to have_content('first post')
     expect(page).to have_content('second post')
-    puts page.body
     expect(page).to have_css("img[src*='tesla-cat.jpg']")
   end 
   
@@ -17,9 +16,8 @@ end
 RSpec.feature "Single post view", type: :feature do
     scenario 'user can view a single post' do
     post = create(:post)
-
     visit '/'
-    find(:xpath, "//a[contains(@href,'posts/1')]").click
+    first(:xpath, "//a[contains(@href,'posts/1')]").click
     expect(page.current_path).to eq(post_path(post))
   end
 end
