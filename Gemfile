@@ -27,6 +27,12 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Forms made easy!
+gem 'simple_form'
+
+# Easy upload management for ActiveRecord
+gem "paperclip", "~> 6.0.0"
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -51,7 +57,6 @@ group :development do
   # Linting
   gem 'rubocop', '~> 0.59.2', require: false
   gem "rubocop-rails"
-  gem 'rspec-rails', '~> 3.8'
 end
 
 group :test do
