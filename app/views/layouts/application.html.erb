@@ -20,8 +20,8 @@
                 <li><%= link_to 'New Post', new_post_path %></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               </ul>
           </div>
         </nav>
@@ -29,6 +29,8 @@
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
     <% end %>
+    
     <%= yield %>
+    
   </body>
 </html>
