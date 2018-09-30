@@ -1,3 +1,18 @@
-<%=image_tag @post.image.url(:medium)%>
-<%=@post.caption%>
-<%= link_to 'Edit Post', edit_post_path(@post.id) %>
+<div class="posts-wrapper row">
+    <div class="post">
+      <div class="post-head">
+        <div class="name">
+          Josh Nickson
+        </div>
+      </div>
+      <div class="image center-block">
+          <%= link_to (image_tag @post.image.url(:medium)), @post%>
+        </div>
+      <p class="caption">
+        <%= @post.caption %>
+      </p>
+      <div class="text-right edit-links">
+        <%= link_to "Edit Post", edit_post_path(@post) %>
+      </div>
+    </div>
+  </div>
